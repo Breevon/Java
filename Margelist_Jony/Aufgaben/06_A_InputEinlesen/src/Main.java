@@ -175,7 +175,7 @@ public class Main {
         int hourlyWage = userInput.nextInt();
 
         System.out.println("How many hours do you work a week?");
-        int hoursWeek =  userInput.nextInt();
+        int hoursWeek = userInput.nextInt();
         userInput.nextLine();
 
         System.out.println("Your monthly wage is: " + (hourlyWage*hoursWeek*4));
