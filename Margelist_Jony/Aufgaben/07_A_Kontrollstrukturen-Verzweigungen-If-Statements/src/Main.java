@@ -90,9 +90,9 @@ public class Main {
         short userAge = userInput.nextShort();
 
         if (userAge<18){
-            System.out.println("You aren't allowed to consum alcohol.");
+            System.out.println("You aren't allowed to consume alcohol.");
         } else {
-            System.out.println("You are allowed to consum alcohol.");
+            System.out.println("You are allowed to consume alcohol.");
         }
 
         //--------------------------------------------------------------------------------------------------------------
@@ -108,6 +108,23 @@ public class Main {
 
         //      However, if the user is older than 21, then tell him that he is allowed to consume alcohol
         //      everywhere.
+        System.out.println("Give in your age again for a detailed record");
+        userAge = userInput.nextShort();
+        userInput.nextLine();
+
+        short usRule =  (short) (21- userAge);
+
+        if (usRule <= 0){
+            System.out.println("You are allowed to consume alcohol everywhere.");
+        } else {
+            if (usRule <= 3){
+                System.out.println("You are legally allowed to consume alcohol in most parts of the world, except the United States");
+            }
+        }
+
+        if (userAge < 18){
+            System.out.println("You aren't allowed to consume alcohol in most parts of the world.");
+        }
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 7");
