@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -74,6 +75,7 @@ public class Main {
         //      If true, print that the number is out of the 50-100 bound.
         //      If false, print, that the number is in the 50-100 bound.
         //      Test your program with reasonable values like 25, 75, 150
+        System.out.println("Give a random number in once again.");
         userNo = userInput.nextInt();
         if (userNo<50 || userNo>100){
             System.out.println("The number is out of the 50-100 bound.");
@@ -88,8 +90,23 @@ public class Main {
 
         boolean lightsTurnedOff = true;
 
+        if (lightsTurnedOff){
+            System.out.println("Move time");
+        } else {
+            System.out.println("Not watching a movie with lights on...");
+        }
+
+
+        if (!lightsTurnedOff){
+            System.out.println("Not watching a movie with lights on...");
+        } else {
+            System.out.println("Move time");
+        }
+
+
 
         // After implementing the solution above, use the shortform of if-else to reproduce the same output
+        System.out.println(lightsTurnedOff ? "Move Time" : "Not watching a movie with lights on...");
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -101,6 +118,25 @@ public class Main {
         //      "Do you want to go to the beach? (true or false)"
         //      "Do you want to go to the mountains? (true or false)"
         //      Assign the variables "goToBeach" and "goToMountains" the answers of the user input.
+        System.out.println("Do you want to go to the beach? (true or false)");
+        boolean goToBeach = userInput.nextBoolean();
+
+        System.out.println("Do you want to go to the mountains? (true or false)");
+        boolean goToMountains = userInput.nextBoolean();
+
+        if (goToBeach ^ goToMountains) {
+            if (goToBeach) {
+                System.out.println("Packing sunscreen for the beach!");
+            } else {
+                System.out.println("Bringing hiking boots for the mountains!");
+            }
+        } else {
+            if (goToBeach) {
+                System.out.println("You can't go to both due to time constrains");
+            } else {
+                System.out.println("Don't be lazy, let's go somewhere!");
+            }
+        }
 
         //      Use an if-statement to check if you're going to exactly one destination, but not both or neither.
         //      If you're going to the beach, print "Packing sunscreen for the beach!"
@@ -132,6 +168,23 @@ public class Main {
         //      Use the && operator and the || operator to check if the student meets all the criteria.
         //      If the student does, print "The student can attend the field trip!"
         //      If the student doesn't, print "The student cannot attend the field trip."
+
+        System.out.println("In which class are you? EMV 1, 2, 3 oder 4?");
+        byte emv = userInput.nextByte();
+
+        System.out.println("Have you paid for the trip? (true or false)");
+        boolean paid = userInput.nextBoolean();
+
+        System.out.println("Were you sick recently? (true or false)");
+        boolean sick = userInput.nextBoolean();
+
+        if (emv < 3 && paid && !sick) {
+            System.out.println("You can attend");
+        } else {
+            System.out.println("You can't attend");
+        }
+
+
         //
         //      Hint: You might want to use brackets"()" to prioritize logic, but it is not necessary to do so.
         //
