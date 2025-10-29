@@ -158,6 +158,17 @@ public class Main {
         //      User Input: 2
         //      Output: "Mage (Strength: 3, Agility: 4, Intelligence: 9)"
 
+        System.out.println("Select a class (1-Alex, 2-Mario, 3-Max, 4-Zen)");
+        byte character = userInput.nextByte();
+
+        switch (character) {
+            case 1 -> System.out.println("Alex (Strength: 1, Agility: 2, Intelligence: 3)");
+            case 1 -> System.out.println("Mario (Strength: 2, Agility: 1, Intelligence: 3)");
+            case 1 -> System.out.println("Max (Strength: 3, Agility: 1, Intelligence: 2)");
+            case 1 -> System.out.println("Zen (Strength: 2, Agility: 2, Intelligence: 2)");
+            default -> System.out.println("Character not found");
+        }
+
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 05");
