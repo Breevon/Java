@@ -259,9 +259,9 @@ public class Main {
         //      Print a warning when the user tries to divide by 0 (Example: 2/0 -> number two must not be 0!
 
         System.out.println("Give me the first number");
-        int userNumber1 = userInput.nextInt();
+        float userNumber1 = userInput.nextFloat();
         System.out.println("Give me the second number?");
-        int userNumber2 = userInput.nextInt();
+        float userNumber2 = userInput.nextFloat();
         userInput.nextLine();
 
         System.out.println("What do you like me to do? (addition, subtraction, division, multiplication)");
