@@ -54,7 +54,7 @@ public class Main {
             default -> System.out.println("Not a Weekday");
         }
         userInput.nextLine();
-        
+
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -196,6 +196,59 @@ public class Main {
         //      8: hachi
         //      9: kyuu
         //      default: Mukō na sūchi
+
+        System.out.println("Which digit do you want to translate? (0-9)");
+        byte numberUser = userInput.nextByte();
+
+        System.out.println("In which language do you want to translate your digit?");
+        System.out.println("1-german, 2-english, 3-japanese");
+        byte languageUser = userInput.nextByte();
+
+        if (languageUser == 1) {
+            switch (numberUser) {
+                case 0 -> System.out.println("null");
+                case 1 -> System.out.println("eins");
+                case 2 -> System.out.println("zwei");
+                case 3 -> System.out.println("drei");
+                case 4 -> System.out.println("vier");
+                case 5 -> System.out.println("fünf");
+                case 6 -> System.out.println("sechs");
+                case 7 -> System.out.println("sieben");
+                case 8 -> System.out.println("acht");
+                case 9 -> System.out.println("neun");
+                default -> System.out.println("charakter nicht gefunden");
+            }
+        } else if (languageUser == 2) {
+            switch (numberUser) {
+                case 0 -> System.out.println("zero");
+                case 1 -> System.out.println("one");
+                case 2 -> System.out.println("two");
+                case 3 -> System.out.println("three");
+                case 4 -> System.out.println("four");
+                case 5 -> System.out.println("five");
+                case 6 -> System.out.println("six");
+                case 7 -> System.out.println("seven");
+                case 8 -> System.out.println("eight");
+                case 9 -> System.out.println("nine");
+                default -> System.out.println("character not found");
+            }
+        } else if (languageUser == 3) {
+            switch (numberUser) {
+                case 0 -> System.out.println("zero");
+                case 1 -> System.out.println("ichi");
+                case 2 -> System.out.println("ni");
+                case 3 -> System.out.println("san");
+                case 4 -> System.out.println("shi");
+                case 5 -> System.out.println("go");
+                case 6 -> System.out.println("roku");
+                case 7 -> System.out.println("nana");
+                case 8 -> System.out.println("hachi");
+                case 9 -> System.out.println("kyuu");
+                default -> System.out.println("Mukō na sūchi");
+            }
+        } else {
+            System.out.println("Number out of range");
+        }
 
 
         //--------------------------------------------------------------------------------------------------------------
