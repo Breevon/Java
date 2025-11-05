@@ -267,7 +267,7 @@ public class Main {
         System.out.println("What do you like me to do? (addition, subtraction, division, multiplication)");
         String userFunction = userInput.nextLine();
 
-        if (userNumber2 == 0) {
+        if (userNumber2 == 0 && userFunction.equals("division")) {
             System.out.println("number two must not be 0!");
         } else {
             switch (userFunction) {
@@ -277,6 +277,21 @@ public class Main {
                 case "multiplication" -> System.out.println("Your answer is " + (userNumber1*userNumber2) );
                 default -> System.out.println("Something went wrong");
             }
+        }
+
+
+        switch (userFunction) {
+            case "addition" -> System.out.println("Your answer is " + (userNumber1+userNumber2) );
+            case "subtraction" -> System.out.println("Your answer is " + (userNumber1-userNumber2) );
+            case "division" -> {
+                if(userNumber2 == 0) {
+                    System.out.println("OHOHO");
+                } else {
+                    System.out.println("Your answer is " + (userNumber1/userNumber2) );
+                }
+            }
+            case "multiplication" -> System.out.println("Your answer is " + (userNumber1*userNumber2) );
+            default -> System.out.println("Something went wrong");
         }
 
         userInput.close();

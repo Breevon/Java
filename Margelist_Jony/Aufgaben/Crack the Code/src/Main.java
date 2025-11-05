@@ -12,7 +12,7 @@ public class Main {
         int randomNumber3 = rand.nextInt(10);
         int randomNumber4 = rand.nextInt(10);
 
-        
+
 
 
 
