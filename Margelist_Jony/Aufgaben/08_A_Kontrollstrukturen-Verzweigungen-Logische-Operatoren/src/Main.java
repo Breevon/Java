@@ -185,6 +185,10 @@ public class Main {
         }
 
 
+        userInput.close();
+        
+
+
         //
         //      Hint: You might want to use brackets"()" to prioritize logic, but it is not necessary to do so.
         //
