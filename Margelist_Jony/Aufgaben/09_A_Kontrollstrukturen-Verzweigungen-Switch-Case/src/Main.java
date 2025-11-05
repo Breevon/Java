@@ -275,6 +275,7 @@ public class Main {
                 case "subtraction" -> System.out.println("Your answer is " + (userNumber1-userNumber2) );
                 case "division" -> System.out.println("Your answer is " + (userNumber1/userNumber2) );
                 case "multiplication" -> System.out.println("Your answer is " + (userNumber1*userNumber2) );
+                default -> System.out.println("Something went wrong");
             }
         }
 
