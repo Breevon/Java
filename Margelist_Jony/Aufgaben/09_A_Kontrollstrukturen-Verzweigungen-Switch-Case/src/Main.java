@@ -258,6 +258,28 @@ public class Main {
         //      Calculate the correct answer and print it out.
         //      Print a warning when the user tries to divide by 0 (Example: 2/0 -> number two must not be 0!
 
+        System.out.println("Give me the first number");
+        int userNumber1 = userInput.nextInt();
+        System.out.println("Give me the second number?");
+        int userNumber2 = userInput.nextInt();
+        userInput.nextLine();
+
+        System.out.println("What do you like me to do? (addition, subtraction, division, multiplication)");
+        String userFunction = userInput.nextLine();
+
+        if (userNumber2 == 0) {
+            System.out.println("number two must not be 0!");
+        } else {
+            switch (userFunction) {
+                case "addition" -> System.out.println("Your answer is " + (userNumber1+userNumber2) );
+                case "subtraction" -> System.out.println("Your answer is " + (userNumber1-userNumber2) );
+                case "division" -> System.out.println("Your answer is " + (userNumber1/userNumber2) );
+                case "multiplication" -> System.out.println("Your answer is " + (userNumber1*userNumber2) );
+            }
+        }
+
+        userInput.close();
+
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Optional exercises");
