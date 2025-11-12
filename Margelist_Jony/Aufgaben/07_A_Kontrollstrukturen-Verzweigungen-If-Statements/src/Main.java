@@ -133,6 +133,24 @@ public class Main {
         //      And if the user also has an IQ higher than 120, then print out this:
         //      " ...and also very smart!"
 
+        System.out.println("How old are you?");
+        userAge = userInput.nextShort();
+        String young = "You are still young";
+        String smart = " and also ver smart";
+
+        System.out.println("Enter your IQ");
+        short userIQ = userInput.nextShort();
+
+        if (userAge < 20) {
+            if (userIQ > 120) {
+                System.out.println(young + smart);
+            } else {
+                System.out.println(young);
+            }
+        } else {
+            System.out.println("No data about your age in this Exercise");
+        }
+
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 8");
         // 08.  Write a program that prompts the user for two integers and prints the larger of the two.
@@ -161,6 +179,22 @@ public class Main {
         //      3
         //      The numbers are equal!
 
+        System.out.println("Give a number to find the larger one");
+        int userNumber1 = userInput.nextInt();
+
+        System.out.println("Give the second number");
+        int userNumber2 = userInput.nextInt();
+
+        if (userNumber1 > userNumber2) {
+            System.out.println("Greater number is: " + userNumber1);
+        } else if (userNumber1 < userNumber2) {
+            System.out.println("Greater number is: " + userNumber2);
+        } else if (userNumber1 == userNumber2) {
+            System.out.println("The numbers are equal!");
+        } else {
+            System.out.println("Invalid entry");
+        }
+
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 9");
@@ -173,6 +207,28 @@ public class Main {
         //      81-90     very good
         //      91-100    awesome!
         //      > 100     impossible
+
+        System.out.println("Enter your exam mark");
+        short userExamMark = userInput.nextShort();
+        if (userExamMark < 0) {
+            System.out.println("Impossible");
+        } else if (userExamMark <= 30) {
+            System.out.println("failed");
+        } else if (userExamMark <= 50) {
+            System.out.println("poor");
+        } else if (userExamMark <= 60) {
+            System.out.println("ok");
+        } else if (userExamMark <= 80) {
+            System.out.println("good");
+        } else if (userExamMark <= 90) {
+            System.out.println("very good");
+        } else if (userExamMark <= 100) {
+            System.out.println("awesome!");
+        } else if (userExamMark > 100) {
+            System.out.println("Impossible");
+        } else {
+            System.out.println("Invalid Entry");
+        }
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 10");
