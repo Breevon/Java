@@ -26,25 +26,93 @@ public class Main {
         //
         //      Questions to consider:
         //      1. What would happen if you ran this code as is?
+        //      Spam
+
         //      2. Why does this behavior occur?
+        //      Doesnt change the variable
+
         //      3. How can you modify the code to achieve the desired output:
         //         i:0 i:1 i:2 i:3 i:4 i:5 i:6 i:7 i:8 i:9
+        //      System.out.println("iteratorEx1:" + iteratorEx1 + " "); -> System.out.println("i:" + iteratorEx1 + " ");
+        //      And add this on next line:
+        //      iteratorEx1++;
+
         //      4. Extra: What happens, if the initial value of "iteratorEx1" would be set to 100 instead of 0?
+        //      Programm wont run, because its always larger than 10.
 
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 02");
         // 02.  Using do-while loops, print each task and its numbers to the console (all numbers inclusive):
         //      02-01. 0 to 100
+        int no1 = 0;
+
+        do {
+            System.out.println(no1);
+            no1++;
+        } while (no1 <= 100);
+
         //      02-02. 42 to 100
+        no1 = 42;
+        do {
+            System.out.println(no1);
+            no1++;
+        } while (no1<=100);
+
         //      02-03. 42 to 123
+        no1 = 42;
+        do {
+            System.out.println(no1);
+            no1++;
+        } while (no1<=123);
+
         //      02-04. Even numbers (0, 2, 4, ...) from 0 to 10
+        no1 = 0;
+        do {
+            System.out.println(no1);
+            no1 +=2;
+        } while (no1<=10);
+
         //      02-05. Odd numbers (1, 3, 5, ...) from 0 to 10
+        no1 = 1;
+        do {
+            System.out.println(no1);
+            no1+=2;
+        } while (no1<=10);
+
         //      02-06. -10 to 20
+        no1 = -10;
+        do {
+            System.out.println(no1);
+            no1++;
+        } while (no1<=20);
+
         //      02-07. 35 to 0 (descending)
+        no1 = 35;
+        do {
+            System.out.println(no1);
+            no1--;
+        } while (no1>=0);
+
         //      02-08. 15 to -20 (descending)
+        no1 = 15;
+        do {
+            System.out.println(no1);
+            no1--;
+        } while (no1>=-20);
+
         //      02-09. Even numbers from 10 to -10 (descending)
+        no1 = 10;
+        do {
+            System.out.println(no1);
+            no1-=2;
+        } while (no1>=-10);
         //      02-10. Odd numbers from 10 to -10 (descending)
+        no1 = 9;
+        do {
+            System.out.println(no1);
+            no1-=2;
+        } while (no1>=-10);
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -54,6 +122,11 @@ public class Main {
         int whileSum_03 = 0;
 
         // Your code here
+        no1 = 0;
+        do {
+            whileSum_03 += no1;
+            no1++;
+        } while (no1<=100);
 
         System.out.println(whileSum_03); // Should be 5050
 
@@ -65,6 +138,11 @@ public class Main {
         int whileSum_04 = 0;
 
         // Your code here
+        no1 = 0;
+        do {
+            whileSum_04+=no1;
+            no1+=2;
+        } while (no1<=100);
 
         System.out.println(whileSum_04); // Should be 2550
 
@@ -76,6 +154,11 @@ public class Main {
         int whileSum_05 = 0;
 
         // Your code here
+        no1 = 1;
+        do {
+            whileSum_05+=no1;
+            no1+=2;
+        } while (no1<=100);
 
         System.out.println(whileSum_05); // Should be 2500
 
@@ -102,6 +185,10 @@ public class Main {
         // 3. Stops when 22 is generated
 
         // Your code here
+        do {
+            iterationSteps++;
+            randomNumber = randomGenerator.nextInt(101);
+        } while (!(randomNumber==22));
 
         System.out.println("The program ran " + iterationSteps + " times until the number was found!");
 
@@ -130,6 +217,12 @@ public class Main {
         // 3. Continues until firstRandomNumber equals secondRandomNumber
 
         // Your code here
+        secondRandomNumber=randomGenerator.nextInt(101);
+
+        do {
+            iterationSteps++;
+            secondRandomNumber=randomGenerator.nextInt(101);
+        } while (!(firstRandomNumber==secondRandomNumber));
 
         System.out.println("The program ran " + iterationSteps + " times until both random numbers matched.");
         System.out.println("The matching number was: " + firstRandomNumber);
@@ -160,6 +253,15 @@ public class Main {
         // 3. Continues until the guessed number matches the random number
 
         // Your code here
+        System.out.println("Guess the number (0-10)");
+        guessedNumber=input.nextInt();
+        do {
+            if (guessedNumber!=rndNumberToGuess) {
+                System.out.println("You got it wrong try again. (0-10)");
+                guessedNumber=input.nextInt();
+            }
+        } while (guessedNumber!=rndNumberToGuess);
+
 
         System.out.println("Congratulations! You've guessed the correct number: " + rndNumberToGuess);
 
