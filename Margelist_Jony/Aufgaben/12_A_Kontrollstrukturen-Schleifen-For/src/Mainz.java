@@ -26,7 +26,8 @@ public class Mainz {
         //         i:0 i:1 i:2 i:3 i:4 i:5 i:6 i:7 i:8 i:9
         //      System.out.println("iteratorEx1:" + iteratorEx1 + " "); -> System.out.println("i:" + iteratorEx1 + " ");
         //      And
-        //      asjhgedsjdahgghfzhgzgjgujzh
+
+        
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 02");
         // 02.  Using for loops, print each task and its numbers to the console (all numbers inclusive):
