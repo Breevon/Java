@@ -26,21 +26,60 @@ public class Mainz {
         //         i:0 i:1 i:2 i:3 i:4 i:5 i:6 i:7 i:8 i:9
         //      System.out.println("iteratorEx1:" + iteratorEx1 + " "); -> System.out.println("i:" + iteratorEx1 + " ");
         //      And
+        //      for (int iteratorEx1 = 0; iteratorEx1 < 10; ) -> for (int iteratorEx1 = 0; iteratorEx1 < 10; iteratorEx1++)
 
-        
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 02");
         // 02.  Using for loops, print each task and its numbers to the console (all numbers inclusive):
         //      02-01. 0 to 100
+        for (int no1 = 0; no1<=100; no1++) {
+            System.out.println(no1);
+        }
+
         //      02-02. 42 to 100
+        for (int no1 = 42; no1<=100; no1++) {
+            System.out.println(no1);
+        }
+
         //      02-03. 42 to 123
+        for (int no1 = 42; no1<=123; no1++) {
+            System.out.println(no1);
+        }
+
         //      02-04. Even numbers (0, 2, 4, ...) from 0 to 10
+        for (int no1 = 0; no1<=10; no1+=2) {
+            System.out.println(no1);
+        }
+
         //      02-05. Odd numbers (1, 3, 5, ...) from 0 to 10
+        for (int no1 = 1; no1<=10; no1+=2) {
+            System.out.println(no1);
+        }
+
         //      02-06. -10 to 20
+        for (int no1 = -10; no1<=20; no1++) {
+            System.out.println(no1);
+        }
+
         //      02-07. 35 to 0 (descending)
+        for (int no1 = 35; no1>=0; no1--) {
+            System.out.println(no1);
+        }
+
         //      02-08. 15 to -20 (descending)
+        for (int no1 = 15; no1>=-20; no1--) {
+            System.out.println(no1);
+        }
+
         //      02-09. Even numbers from 10 to -10 (descending)
+        for (int no1 = 10; no1>=-10; no1-=2) {
+            System.out.println(no1);
+        }
+
         //      02-10. Odd numbers from 10 to -10 (descending)
+        for (int no1 =9; no1>=-10; no1-=2) {
+            System.out.println(no1);
+        }
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -50,6 +89,9 @@ public class Mainz {
         int forSum_03 = 0;
 
         // Your code here
+        for (int no1 = 0; no1<=100; no1++) {
+            forSum_03 += no1;
+        }
 
         System.out.println(forSum_03); // Should be 5050
 
@@ -60,6 +102,9 @@ public class Mainz {
         int forSum_04 = 0;
 
         // Your code here
+        for (int no1 = 0; no1<=100; no1+=2) {
+            forSum_04 += no1;
+        }
 
         System.out.println(forSum_04); // Should be 2550
 
@@ -70,6 +115,9 @@ public class Mainz {
         int forSum_05 = 0;
 
         // Your code here
+        for (int no1 = 1; no1<=100; no1+=2) {
+            forSum_05 += no1;
+        }
 
         System.out.println(forSum_05); // Should be 2500
 
