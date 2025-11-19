@@ -12,7 +12,7 @@ public class Main {
 
         //      Implement a while-loop,  which calculates the sum of up to 20 numbers.
 
-        /*
+/*
         Scanner numberScanner = new Scanner(System.in);
 
         System.out.println("Input number 1: ");
@@ -29,7 +29,7 @@ public class Main {
         int sumOfNumbers1To3 = number1 + number2 + number3; // and so on...;
 
         System.out.println("The sum of all three numbers is: " + sumOfNumbers1To3);
-        */
+*/
 
         // Your task:
         // 1. Declare a variable `numbersToRead` and set it to 20.
@@ -60,6 +60,27 @@ public class Main {
         //      0
         //      You provided 4 numbers. The sum of those numbers are : 12
 
+        // My code
+
+        Scanner userInput = new Scanner(System.in);
+
+        int numbersToRead = 20;
+        int userNumber;
+        int numbersRead = 0;
+        int sum = 0;
+
+        while (numbersRead < numbersToRead) {
+            System.out.println("Please input an integer. (Type (0) to exit, " + (numbersToRead-numbersRead) +" numbers remaining)");
+            userNumber = userInput.nextInt();
+            if (userNumber==0){
+                break;
+            }
+            sum += userNumber;
+            numbersRead++;
+
+        }
+        System.out.println("You provided " + numbersRead + " numbers. The sum of those numbers are: " + sum);
+
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 02");
@@ -81,7 +102,6 @@ public class Main {
 
         // Solve this task without controlling a boolean, but with a break instead.
 
-
         // Sample output:
         // What is currently making your life difficult or what do you like to do (type "exit" to quit)?
         // Money
@@ -92,6 +112,12 @@ public class Main {
         // What is currently making your life difficult or what do you like to do (type "exit" to quit)?
         // exit
         // You have exited the program (Exercise 02)
+
+        // My code
+
+        String userAnswer;
+
+
 
 
 
