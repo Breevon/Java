@@ -1,17 +1,5 @@
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
-
-        // Random Number generator
-
-        Random rand = new Random();
-
-        int asd = rand.nextInt(51); //min. 0 & max. 50
-        System.out.println(asd);
-
-
-        //substring
 
         String mynumber = "9876";
 
@@ -25,7 +13,5 @@ public class Main {
         System.out.println(no2);
         System.out.println(no3);
         System.out.println(no4);
-
-
     }
 }
