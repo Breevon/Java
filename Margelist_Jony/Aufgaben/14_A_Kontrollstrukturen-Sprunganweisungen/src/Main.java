@@ -214,15 +214,15 @@ public class Main {
         //      The sum of the 2 negative numbers is: -20
         //      The total sum is positive: 42
 
+        int userPositiveNo = 0;
+        int userNegativeNo = 0;
+        int userPositiveNoCounter = 0;
+        int userNegativeNoCounter = 0;
+        int total = 0;
+
         while (true) {
             System.out.println("Type in a number (0=exit):");
             userNumber = userInput.nextInt();
-
-            int userPositiveNo = 0;
-            int userNegativeNo = 0;
-            int userPositiveNoCounter = 0;
-            int userNegativeNoCounter = 0;
-            int total = 0;
             total += userNumber;
             if (userNumber<0) {
                 userNegativeNoCounter++;
@@ -231,10 +231,19 @@ public class Main {
                 userPositiveNoCounter++;
                 userPositiveNo += userNumber;
             } else {
-                System.out.println("User has exited the programm");
+                System.out.println("Calculating numbers first...");
+                System.out.println("The sum of the " + userPositiveNoCounter + " positive numbers is: " + userPositiveNo);
+                System.out.println("The sum of the " + userNegativeNoCounter + " negative numbers is: " + userNegativeNo);
+                if (total<0){
+                    System.out.println("The total sum is negative: " + total);
+                } else if (total>0) {
+                    System.out.println("The total sum is positive " + total);
+                } else {
+                    System.out.println("The total sum is 0");
+                }
+                break;
             }
 
-            System.out.println();
         }
 
 
