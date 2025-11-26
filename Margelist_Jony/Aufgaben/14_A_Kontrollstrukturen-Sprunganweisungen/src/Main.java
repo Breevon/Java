@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -80,6 +81,7 @@ public class Main {
 
         }
         System.out.println("You provided " + numbersRead + " numbers. The sum of those numbers are: " + sum);
+        userInput.nextLine();
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -116,8 +118,29 @@ public class Main {
         // My code
 
         String userAnswer;
+        while (true) {
+            System.out.println("What is currently making your life difficult or what do you like to do (type \"exit\" to quit)?");
+            userAnswer = userInput.nextLine();
+            userAnswer = userAnswer.toLowerCase();
 
-
+            switch (userAnswer) {
+                case "money" -> System.out.println(" Money can be good or bad");
+                case "school" -> System.out.println("But school is something important for your future");
+                case "nothing" -> System.out.println("Nice!");
+                case "girlfriend" -> System.out.println("Sorry, I cant say anything on this topic");
+                case "job" -> System.out.println("Speak with your chef");
+                case "laziness" -> System.out.println("Do something that is fun for you, and merge it with a task");
+                case "homework" -> System.out.println("Start a protest, no homework anymore.");
+                case "ski" -> System.out.println("That a really nice thing to do in winter");
+                case "football" -> System.out.println("Nice");
+                case "love" -> System.out.println("Bad for you, I hope u r fine.");
+                default -> System.out.println("Its sad to hear! And I hope u can get through it");
+            }
+            if (userAnswer.equals("exit")) {
+                System.out.println("User has exited the programm");
+                break;
+            }
+        }
 
 
 
@@ -145,6 +168,22 @@ public class Main {
         //      Enter a number (0 to quit):
         //      0
         //      Program ended. You entered 3 numbers. Sum of squares: 29
+
+        // my code
+
+        while (true) {
+            System.out.println("Enter a number (0 to quit)");
+            userNumber = userInput.nextInt();
+            if (userNumber<0) {
+                System.out.println("Unsuitable number");
+            } else if (userNumber>0) {
+                System.out.println(userNumber*userNumber);
+            } else {
+                System.out.println("User has exited the programm");
+                break;
+            }
+
+        }
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -174,6 +213,29 @@ public class Main {
         //      The sum of the 3 positive numbers is: 62
         //      The sum of the 2 negative numbers is: -20
         //      The total sum is positive: 42
+
+        while (true) {
+            System.out.println("Type in a number (0=exit):");
+            userNumber = userInput.nextInt();
+
+            int userPositiveNo = 0;
+            int userNegativeNo = 0;
+            int userPositiveNoCounter = 0;
+            int userNegativeNoCounter = 0;
+            int total = 0;
+            total += userNumber;
+            if (userNumber<0) {
+                userNegativeNoCounter++;
+                userNegativeNo += userNumber;
+            } else if (userNumber>0) {
+                userPositiveNoCounter++;
+                userPositiveNo += userNumber;
+            } else {
+                System.out.println("User has exited the programm");
+            }
+
+            System.out.println();
+        }
 
 
         //--------------------------------------------------------------------------------------------------------------
