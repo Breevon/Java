@@ -84,6 +84,19 @@ public class Mainx {
         System.out.println("Exercise 04");  // Challenge+!
         // 04. Print all prime numbers from 2-100.
 
+        for (int counter = 2; counter <= 100; counter++){
+            int checker = 2;
+            while (checker <= counter) {
+                if (counter%checker == 0){
+                    if (counter == checker) {
+                        System.out.println(counter);
+                    } else {
+                        break;
+                    }
+                }
+                checker++;
+            }
+        }
 
 
     }
