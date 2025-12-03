@@ -1,12 +1,14 @@
 
 public class Main {
     public static void main(String[] args) {
-/*
+
         Car myFirstCar = new Car();
         System.out.println(myFirstCar.brand);
+        myFirstCar.honk("allooo");
 
-        Car audi = new Car();
-        audi.brand = "audi";
+        Car audi = new Car("audi");
+        audi.honk();
+        audi.honk("helloooo im a fancy audi");
 
         Car ferrari = new Car();
         ferrari.brand = "ferrari";
@@ -15,7 +17,7 @@ public class Main {
         vw.brand = "vm";
 
         System.out.println(vw.brand);
-*/
+
 // Oder
 /*
         Car myFirstCar = new Car();
@@ -28,11 +30,11 @@ public class Main {
         System.out.println(nissan.brand);
 */
 
-        Car nissan = new Car("nissan", "black");
-        Car ferrari = new Car("ferrari", "blue");
-        Car volvo = new Car("volvo", "red");
-
-        System.out.println(nissan.brand);
+//        Car nissan = new Car("nissan", "black");
+//        Car ferrari = new Car("ferrari", "blue");
+//        Car volvo = new Car("volvo", "red");
+//
+//        System.out.println(nissan.brand);
 
 
     }
