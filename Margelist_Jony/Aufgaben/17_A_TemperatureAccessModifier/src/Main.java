@@ -13,8 +13,11 @@ public class Main {
         //Number 6
         //Error because the object temp1 which is connected to the konstraktor Temperature cant be accessed anymore. (Private)
 
-        temp1.getCelsiusToKelvin();
+        System.out.println(temp1.getCelsiusToFahrenheit());
+        System.out.println(temp1.getCelsiusToKelvin());
 
-
+        Temperature tempDefault = new Temperature();
+        System.out.println(tempDefault.getCelsiusToFahrenheit());
+        System.out.println(tempDefault.getCelsiusToKelvin());
     }
 }
