@@ -19,5 +19,20 @@ public class Main {
         Temperature tempDefault = new Temperature();
         System.out.println(tempDefault.getCelsiusToFahrenheit());
         System.out.println(tempDefault.getCelsiusToKelvin());
+
+        Temperature temp2 = new Temperature();
+        temp2.temperatureC = 10.5;
+
+        temp2.printCelsius();
+
+        System.out.println(temp1.getCelsiusToFahrenheit());
+
+        System.out.println(temp1.getCelsiusToKelvin());
+
+        System.out.println(temp2.getCelsiusToFahrenheit());
+
+        System.out.println(temp2.getCelsiusToKelvin());
+
+
     }
 }

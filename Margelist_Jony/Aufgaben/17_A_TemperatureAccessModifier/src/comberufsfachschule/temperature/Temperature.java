@@ -41,6 +41,14 @@ public class Temperature {
         return temperatureC + 273.15;
     }
 
+    public double getTemperatureC(){
+        return this.temperatureC;
+    }
+
+    public void setTemperatureC(double temperatureC){
+        this.temperatureC = temperatureC;
+    }
+
 }
 
 
