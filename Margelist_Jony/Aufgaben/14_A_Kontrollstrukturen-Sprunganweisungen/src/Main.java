@@ -265,6 +265,8 @@ public class Main {
             countingNumber++;
         }
 
+        // use break instead of "continue"
+
 
         */
 
@@ -276,6 +278,20 @@ public class Main {
         //      - Stop the loop if the square exceeds 200 (use break for this)
         //      Use a for loop, and make sure to use both continue and break statements.
         //      Calculate and print the sum of all odd squares (should be 365)
+        int sumOfAllOddSquares = 0;
+        for (int x = 1; x <= 20; x++){
+            if (x%3 == 0){
+                continue;
+            } else if (x*x > 200) {
+                break;
+            }  else {
+                System.out.println(x*x);
+                if ((x*x)%2 != 0){
+                    sumOfAllOddSquares += x*x;
+                }
+            }
+        }
+        System.out.println("Sum of all odd Squares: " + sumOfAllOddSquares);
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -291,6 +307,18 @@ public class Main {
         int nonPrimesCounter = 0;
 
         // Your solution here
+        for (int x = 100; x <= 200; x++){
+            for (int checker = 2; checker <= x; checker++){
+                if (x%checker == 0){
+                    if (x == checker){
+                        primesCounter++;
+                    } else {
+                        nonPrimesCounter++;
+                        break;
+                    }
+                }
+            }
+        }
 
         System.out.println("\nTotal numbers: " + (primesCounter + nonPrimesCounter) + ".");
         System.out.println("Number of non-prime numbers: " + nonPrimesCounter);
@@ -311,6 +339,12 @@ public class Main {
         int smallestDivisor = 1;
 
         // Your solution here
+        for (int x = 2; x <= number; x++){
+            if (number%x == 0){
+                smallestDivisor = x;
+                break;
+            }
+        }
 
         System.out.println("The smallest divisor of " + number + " is: " + smallestDivisor);
 
@@ -331,6 +365,12 @@ public class Main {
         int gcd = 1; // GCD for the above numbers would be 12.
 
         // Your solution here
+        for (int checker = number1Ex9; checker >= 0; checker--) {
+            if (number2Ex9%checker == 0 && number1Ex9%checker == 0){
+                gcd = checker;
+                break;
+            }
+        }
 
         System.out.println("The Greatest Common Divisor (GCD) of " + number1Ex9 + " and " + number2Ex9 + " is: " + gcd);
 
