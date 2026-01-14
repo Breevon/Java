@@ -28,6 +28,7 @@ public class Main {
         System.out.println();
 
         namesArray.printArrayValuesFromTo(4,4);
+        System.out.println();
 
 
         NumbersArray numbersArray = new NumbersArray();

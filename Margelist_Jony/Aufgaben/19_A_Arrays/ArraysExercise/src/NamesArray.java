@@ -49,7 +49,7 @@ public class NamesArray {
                 System.out.println(name[i]);
             }
         } else {
-            System.out.println("“Startposition can’t be the same as endposition!”");
+            System.out.println("\"Startposition can’t be the same as endposition!\"");
         }
 
     }
