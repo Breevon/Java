@@ -7,7 +7,7 @@ public class Singleton {
 
     public static int Singleton getInstance(){
         if (instance == null){
-            
+
         }
         return instance;
     }
